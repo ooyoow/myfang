@@ -1,0 +1,24 @@
+{
+  "name": "myfang-web",
+  "version": "0.0.1",
+  "description": "react es6 typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ooyoow/myfang.git"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "typescript"
+  ],
+  "author": "jiawei.mao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ooyoow/myfang/issues"
+  },
+  "homepage": "https://github.com/ooyoow/myfang#readme"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "myfang-server",
+  "version": "0.0.1",
+  "description": "nodejs koa mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ooyoow/myfang.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "jiawei.mao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ooyoow/myfang/issues"
+  },
+  "homepage": "https://github.com/ooyoow/myfang#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
