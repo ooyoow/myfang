@@ -4,7 +4,7 @@
   "description": "nodejs koa mysql",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,22 @@
   },
   "homepage": "https://github.com/ooyoow/myfang#readme",
   "dependencies": {
-    "koa": "^2.5.0"
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.10",
+    "node-fetch": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.4"
   }
 }

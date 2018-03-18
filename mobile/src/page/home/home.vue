@@ -1,29 +1,41 @@
 <template>
-    <div>
-        <div class="head">
-            <head-top signin-up='home'>
-                <span slot='logo' class="head_logo" @click="reload">myfang</span>
-            </head-top>
-            <router-link to='search'>
-                <div class="head-search">
-                    <img class="ser_img" src="../../images/search.png">
-                    <span class="ser_txt">点击搜索</span>
-                </div>
-            </router-link>
+  <div>
+    <div class="head">
+      <head-top signin-up='home'>
+        <span slot='logo' class="head_logo" @click="reload">myfang</span>
+      </head-top>
+      <router-link to='/search'>
+        <div class="head-search">
+          <img class="ser_img" src="../../images/search.png">
+          <span class="ser_txt">点击搜索</span>
         </div>
-        <section class="content">
-            <header class="content_head">
-                <p class="content_head_title">主题购房</p>
-                <a href="/theme">
-                    <p class="content_head_handle">查看所有</p>
-                </a>
-            </header>
-        </section>
+      </router-link>
     </div>
+    <section class="content">
+      <header class="content_head">
+        <p class="content_head_title">主题购房</p>
+        <router-link to='/hourse'>
+          <p class="content_head_handle">查看所有</p>
+        </router-link>
+      </header>
+      <div>
+        <content></content>
+      </div>
+    </section>
+    <section class="content">
+      <header class="content_head">
+        <p class="content_head_title">推荐房源</p>
+      </header>
+      <div>
+        <hourse-list></hourse-list>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 import headTop from '../../components/header/head';
+import hourseList from '../../components/common/hourselist';
 
 export default {
   data() {
@@ -33,7 +45,8 @@ export default {
   mounted() {},
 
   components: {
-    headTop
+    headTop,
+    hourseList
   },
 
   computed: {
