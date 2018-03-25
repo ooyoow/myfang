@@ -3,14 +3,16 @@
 module.exports = {
   name: 'myfang服务',
   port: 3000,
-  dbIp: '127.0.0.1',
-  dbPort: '27017',
-  dbName: 'myfang',
-  dbUser: '',
-  dbPass: '',
-  version: '0.0.1',
-  lang: 'zh_cn',
   licence: '',
+  lang: 'zh_cn',
+  version: '0.0.1',
+  db: {
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: '123456',
+    database: 'myfang'
+  },
   session: {
     name: 'SID',
     secret: 'SID',

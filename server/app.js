@@ -3,7 +3,10 @@
 import Koa from 'koa';
 import config from './config/server.js';
 import router from './routes/index.js';
-
+import koaBodyparser from 'koa-bodyparser';
+import chalk from 'chalk';
+import MysqlStore from 'koa-mysql-session';
+import session from 'koa-session-minimal';
 const app = new Koa();
 // app.all('*', (req, res, next) => {
 //   res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
@@ -17,6 +20,26 @@ const app = new Koa();
 //     next();
 //   }
 // });
+
+//
+app.use(koaBodyparser());
+
+// session存储配置
+const sessionMysqlConfig = {
+  user: config.db.user,
+  password: config.db.password,
+  database: config.db.database,
+  host: config.db.host,
+  port: config.db.port
+};
+
+// 配置session中间件
+app.use(
+  session({
+    key: 'USER_SID',
+    store: new MysqlStore(sessionMysqlConfig)
+  })
+);
 
 // 记录请求URL
 app.use(async (ctx, next) => {
@@ -34,4 +57,6 @@ app.use(async (ctx, next) => {
 // router
 app.use(router.routes(), router.allowedMethods());
 
-app.listen(config.port);
+app.listen(config.port, next => {
+  console.log(chalk.green(`localhost:${config.port} 服务启动成功`));
+});

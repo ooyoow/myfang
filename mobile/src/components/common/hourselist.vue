@@ -31,7 +31,6 @@ export default {
   },
   methods: {
     a(index) {
-      console.log(1234);
       this.$store.item = this.items[index];
     }
   },
@@ -111,7 +110,7 @@ export default {
 }
 .content {
   border-bottom: 1px solid #e5e5e5;
-  padding: 0.53rem 0.53rem 0.53rem 0;
+  padding: 0.4rem;
 }
 .r-content {
   display: flex;
