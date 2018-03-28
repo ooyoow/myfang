@@ -15,6 +15,7 @@ let query = (sql, values) => {
           } else {
             resolve(rows);
           }
+          //释放连接
           connection.release();
         });
       }
